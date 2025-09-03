@@ -122,11 +122,10 @@ footer {
 }
 
 .hero img {
-  width: 40px;           /* or any size that fits */
+  width: clamp(40px, 20vw, 150px);
   height: auto;
-  max-width: 100%;
   display: block;
-  margin: 0 auto 1rem;   /* centers it and adds spacing */
+  margin: 0 auto 1rem;
 }
 
 
