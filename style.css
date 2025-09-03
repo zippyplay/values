@@ -156,3 +156,9 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.centered-placeholder {
+  text-align: center;
+  padding: 80px 20px;
+  font-size: 1.2rem;
+}
+
