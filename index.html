@@ -16,15 +16,17 @@
   <title>ZippyPlay</title>
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Font Awesome preload + fallback -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </noscript>
 
+  <!-- Full Font Awesome stylesheet with integrity -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-wMKN1r8dYFzJmoKUXkY6VpSvbkWjeY6Nnb7mTLAAgrvNymwRUB7hHnFz4XhYIYQv6VQjGkMPt1+NAC7GLb3abw=="
+    integrity="sha512-8TCCcEFN/96I+WeuHeaElA0AkREaXyzyK2M9AZZ2F4XsMnO1mZT9DeUUCq8F7TJq3uPAfr7Okw+aO3TQF2H7NQ=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
@@ -33,16 +35,19 @@
 <body>
   <header>
     <nav class="navbar">
+      <!-- Logo -->
       <div class="logo">
         <a href="index.html">
-        <img src="images/zippyplay-logo.svg" alt="ZippyPlay" class="logo-img">
+          <img src="images/zippyplay-logo.svg" alt="ZippyPlay" class="logo-img">
         </a>
       </div>
+
+      <!-- Navigation Links -->
       <ul class="nav-links" id="nav-links">
-        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#"><i class="fas fa-gamepad"></i> Games</a></li>
-	<li><a href="signup.html"><i class="fas fa-users"></i> Join Us</a></li>
-        <li><a href="#"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="games.html"><i class="fas fa-gamepad"></i> Games</a></li>
+        <li><a href="signup.html"><i class="fas fa-users"></i> Join Us</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
         <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
       <button class="burger" id="burger">&#9776;</button>
@@ -51,31 +56,30 @@
 
   <main>
     <section class="hero">
-      <img src="images/zippyplay-logo.svg" alt="ZippyPlay Logo">
-      <h1>Welcome to ZippyPlay</h1>
-      <p>Mini games for curious minds</p>
+      <img src="images/zippyplay-logo.svg" alt="Ideas" class="hero-logo">
+      <h1>Welcome</h1>
+      <p>Explore, build, share.</p>
     </section>
 
     <section class="icons-grid">
-      <a href="games.html" class="icon-box icon-link">
+      <a href="games.html" class="icon-box">
         <i class="fas fa-gamepad fa-3x"></i>
         <h3>Games</h3>
-        <p>Play fun and free mini games.</p>
+        <p>Play fun, free web games.</p>
       </a>
 
-      <a href="signup.html" class="icon-box icon-link">
+      <a href="signup.html" class="icon-box">
         <i class="fas fa-users fa-3x"></i>
         <h3>Join Us</h3>
-        <p>Become a member to unlock more.</p>
+        <p>Become a member for more.</p>
       </a>
 
-      <a href="about.html" class="icon-box icon-link">
+      <a href="about.html" class="icon-box">
         <i class="fas fa-user fa-3x"></i>
         <h3>About</h3>
-        <p>What this site is and why it exists.</p>
+        <p>Learn who we are.</p>
       </a>
-   </section>
-
+    </section>
   </main>
 
   <footer>
@@ -86,3 +90,4 @@
 </body>
 
 </html>
+
