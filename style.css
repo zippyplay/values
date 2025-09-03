@@ -122,7 +122,7 @@ footer {
 }
 
 .hero img {
-  width: clamp(100px, 50vw, 500px);
+  width: clamp(20px, 40vw, 200px);
   height: auto;
   display: block;
   margin: 0 auto 1rem;
