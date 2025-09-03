@@ -115,9 +115,18 @@ footer {
 }
 
 .icon-box img {
-  width: 40px;         /* set a responsive size (can use % or rem too) */
+  width: 100px;         /* set a responsive size (can use % or rem too) */
   height: auto;        /* let height scale naturally */
   display: block;
   margin: 0 auto 1rem;
 }
+
+.hero img {
+  width: 500px;           /* or any size that fits */
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 1rem;   /* centers it and adds spacing */
+}
+
 
