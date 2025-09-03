@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Google tag (gtag.js) -->
+
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2J29EWT46"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
-
   gtag('config', 'G-Z2J29EWT46');
 </script>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Ideas</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-mx1Y2..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
   <header>
     <nav class="navbar">
       <div class="logo">My Ideas</div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-	<li><a href="contact.html">Contact</a></li>
+        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-blog"></i> Blog</a></li>
+        <li><a href="#"><i class="fas fa-lightbulb"></i> Projects</a></li>
+        <li><a href="#"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
       <button class="burger" id="burger">&#9776;</button>
     </nav>
@@ -32,22 +35,27 @@
 
   <main>
     <section class="hero">
-      <h1>Welcome to My Thought Space</h1>
-      <p>Sharing insights, experiments, and interactive ideas.</p>
+      <img src="images/hero-lightbulb.svg" alt="Ideas" class="hero-img">
+      <h1>Welcome</h1>
+      <p>Explore, build, share.</p>
     </section>
 
-    <section class="about">
-      <h2>About Me</h2>
-      <p>I’m a developer who enjoys exploring ideas through code and writing. This site is where I share them.</p>
-    </section>
-
-    <section class="blog-preview">
-      <h2>Recent Posts</h2>
-      <ul>
-        <li><strong>Why Simplicity Wins in Design</strong> – Aug 2025</li>
-        <li><strong>Building a Tiny Web App in 1 Hour</strong> – July 2025</li>
-        <li><strong>My Take on AI and Creativity</strong> – June 2025</li>
-      </ul>
+    <section class="icons-grid">
+      <div class="icon-box">
+        <i class="fas fa-blog fa-3x"></i>
+        <h3>Blog</h3>
+        <p>Quick thoughts and observations.</p>
+      </div>
+      <div class="icon-box">
+        <i class="fas fa-code fa-3x"></i>
+        <h3>Projects</h3>
+        <p>Code experiments and demos.</p>
+      </div>
+      <div class="icon-box">
+        <i class="fas fa-user fa-3x"></i>
+        <h3>About</h3>
+        <p>Who I am and what drives me.</p>
+      </div>
     </section>
   </main>
 
@@ -57,5 +65,5 @@
 
   <script src="main.js"></script>
 </body>
-</html>
 
+</html>
