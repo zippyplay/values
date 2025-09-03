@@ -122,7 +122,7 @@ footer {
 }
 
 .hero img {
-  width: 100px;           /* or any size that fits */
+  width: 40px;           /* or any size that fits */
   height: auto;
   max-width: 100%;
   display: block;
