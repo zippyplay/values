@@ -143,3 +143,16 @@ footer {
   margin-bottom: 1rem;
 }
 
+/* Make icon-box links look like blocks */
+.icon-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.icon-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
