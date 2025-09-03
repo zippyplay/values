@@ -115,8 +115,9 @@ footer {
 }
 
 .icon-box img {
-  max-width: 100%;
-  height: auto;
-  width: 10px; 
+  width: 40px;         /* set a responsive size (can use % or rem too) */
+  height: auto;        /* let height scale naturally */
+  display: block;
+  margin: 0 auto 1rem;
 }
 
