@@ -37,21 +37,17 @@
     <section class="form-section">
       <h1>Join ZippyPlay</h1>
       <p>Get early access to our latest mini games.</p>
-      <form action="https://formsubmit.co/4880952313772b848e4b839d1b1d5f8c" method="POST">
-        <input type="hidden" name="_next" value="https://www.zippyplay.com/thank-you.html">
-        <input type="hidden" name="_captcha" value="false">
-
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
-
+ 
+      <form id="signup-form">
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
+        <input type="email" id="email" placeholder="Email" required /><br><br>
 
-        <label for="message">Why do you want to join?</label><br>
-        <textarea id="message" name="message" rows="5" placeholder="Optional"></textarea><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" placeholder="Password" required /><br><br>
 
         <button type="submit">Sign Up</button>
       </form>
+
     </section>
   </main>
 
@@ -60,6 +56,46 @@
   </footer>
 
   <script src="main.js"></script>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCtbDymdYFYSBjcR0NvAMt5HE-9AWDcf2U",
+      authDomain: "zippyplay-auth.firebaseapp.com",
+      projectId: "zippyplay-auth",
+      storageBucket: "zippyplay-auth.firebasestorage.app",
+      messagingSenderId: "545965083013",
+      appId: "1:545965083013:web:82fe27fa7c3a80ac201cec"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    const auth = getAuth(app);
+
+    // Handle form submission
+    const form = document.getElementById("signup-form");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const email = form["email"].value;
+      const password = form["password"].value;
+
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        alert("🎉 Sign-up successful!");
+        window.location.href = "members.html";
+      } catch (err) {
+        alert("❌ Error: " + err.message);
+      }
+    });
+  </script>
+
 </body>
 </html>
 
