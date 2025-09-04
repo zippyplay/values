@@ -1,10 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Members Only</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZippyPlay Members</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .protected-content {
+      margin-top: 3rem;
+    }
+
+    #logout-btn {
+      margin-top: 2rem;
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #logout-btn:hover {
+      background-color: #d32f2f;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to ZippyPlay Members Area!</h1>
-  <p>🚧 Exclusive content goes here.</p>
+  <h1>🎮 Welcome to ZippyPlay Members Area</h1>
+
+  <div class="protected-content">
+    <p>This page is only visible to logged-in members.</p>
+    <p>🚧 Exclusive mini-games, beta demos, and early access will appear here.</p>
+  </div>
+
+  <button id="logout-btn">Logout</button>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+    import {
+      getAuth,
+      onAuthStateChanged,
+      signOut
+    } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCtbDymdYFYSBjcR0NvAMt5HE-9AWDcf2U",
+      authDomain: "zippyplay-auth.firebaseapp.com",
+      projectId: "zippyplay-auth",
+      storageBucket: "zippyplay-auth.firebasestorage.app",
+      messagingSenderId: "545965083013",
+      appId: "1:545965083013:web:82fe27fa7c3a80ac201cec"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Redirect if not logged in
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        window.location.href = "signup.html";
+      }
+    });
+
+    // Logout button
+    const logoutBtn = document.getElementById("logout-btn");
+    logoutBtn.addEventListener("click", () => {
+      signOut(auth).then(() => {
+        window.location.href = "signup.html";
+      });
+    });
+  </script>
 </body>
 </html>
+
