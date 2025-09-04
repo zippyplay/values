@@ -417,8 +417,8 @@ footer {
 }
 
 .btn-login:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .input-group {
