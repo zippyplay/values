@@ -5,66 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - ZippyPlay</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    h1 {
-      margin-bottom: 2rem;
-    }
-
-    form {
-      display: inline-block;
-      text-align: left;
-      max-width: 400px;
-      width: 100%;
-    }
-
-    input {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      font-size: 1rem;
-    }
-
-    button {
-      width: 100%;
-      padding: 0.5rem;
-      font-size: 1rem;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    .signup-link {
-      margin-top: 1rem;
-      display: block;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-wMKN1r8dYFzJmoKUXkY6VpSvbkWjeY6Nnb7mTLAAgrvNymwRUB7hHnFz4XhYIYQv6VQjGkMPt1+NAC7GLb3abw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-  <h1>🔐 Login to ZippyPlay</h1>
-  <form id="login-form">
-    <label>Email:</label><br>
-    <input type="email" id="email" required><br>
+<body class="login-page">
 
-    <label>Password:</label><br>
-    <input type="password" id="password" required><br>
+  <!-- Header logo -->
+  <div class="logo-navbar center-logo">
+    <a href="index.html">
+      <img src="images/zippyplay-logo-white.svg" alt="ZippyPlay Logo" class="logo-icon">
+    </a>
+  </div>
 
-    <button type="submit">Login</button>
-  </form>
+  <!-- Login Form -->
+  <main>
+    <section class="auth-form">
+      <h1>🔐 Login to ZippyPlay</h1>
+      <form id="login-form">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" required><br>
 
-  <a class="signup-link" href="signup.html">Don't have an account? Sign up here</a>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" required><br>
 
+        <button type="submit" class="btn-login">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+      </form>
+      <a class="signup-link" href="signup.html">Don't have an account? Sign up here</a>
+    </section>
+  </main>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <!-- Firebase Auth Script -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
     import {
@@ -100,6 +81,7 @@
       }
     });
   </script>
+
 </body>
 </html>
 
