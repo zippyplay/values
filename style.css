@@ -406,11 +406,14 @@ footer {
   background-color: white;
   color: black;
   font-weight: bold;
-  padding: 1rem 2rem;
+  padding: 1.2rem 3rem;
+  font-size: 1.5rem
   border: none;
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 80%
+  max-width: 300px;
 }
 
 .btn-login:hover {
