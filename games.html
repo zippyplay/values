@@ -2,37 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Games – ZippyPlay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games - ZippyPlay</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-8TCCcEFN/96I+WeuHeaElA0AkREaXyzyK2M9AZZ2F4XsMnO1mZT9DeUUCq8F7TJq3uPAfr7Okw+aO3TQF2H7NQ=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-wMKN1r8dYFzJmoKUXkY6VpSvbkWjeY6Nnb7mTLAAgrvNymwRUB7hHnFz4XhYIYQv6VQjGkMPt1+NAC7GLb3abw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
+
   <header>
     <nav class="navbar">
-      <div class="logo">My Ideas</div>
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="images/zippyplay-logo.svg" alt="ZippyPlay" class="logo-img">
+        </a>
+      </div>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="games.html"><i class="fas fa-gamepad"></i> Games</a></li>
-        <li><a href="signup.html"><i class="fas fa-users"></i> Join Us</a></li>
-        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="centered-placeholder">
-    <h1>🎮 Games</h1>
-    <p>This page is coming soon. Stay tuned!</p>
+  <main>
+    <section class="games-category">
+      <h1>Choose Your Game Mode</h1>
+      <div class="icons-grid">
+        <a href="classic.html" class="icon-box icon-box--games">
+          <i class="fas fa-gamepad"></i>
+          <h3>Classic</h3>
+          <p>Play free and fun public games.</p>
+        </a>
+        <a href="members.html" class="icon-box icon-box--member">
+          <i class="fas fa-lock"></i>
+          <h3>Member Only</h3>
+          <p>Login required to unlock special games.</p>
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 My Ideas. All rights reserved.</p>
+    <p>&copy; 2025 ZippyPlay. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
 
