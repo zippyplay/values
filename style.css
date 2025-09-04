@@ -307,7 +307,7 @@ footer {
 }
 
 .logo-button:hover {
-  transform: scale(1.05);
+  transform: translateY(-4px);
 }
 
 .logo-icon {
