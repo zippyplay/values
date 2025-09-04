@@ -336,3 +336,28 @@ footer {
   font-weight: 600;
 }
 
+.icons-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: nowrap;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Optional: fix width to make layout consistent */
+.left-column {
+  width: 400px;
+}
+
+.right-column {
+  width: 220px;
+}
+
