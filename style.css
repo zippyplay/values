@@ -277,18 +277,6 @@ footer {
   margin: 2rem 0 1rem 0;
 }
 
-.icon-box--games {
-  background-color: #fff8e1;
-  border-color: #f9a825;
-}
-
-.icon-box--games:hover {
-  background-color: #fff3c0;
-  border-color: #f57f17;
-  transform: scale(1.03);
-  box-shadow: 0 6px 16px rgba(249, 168, 37, 0.3);
-}
-
 .icon-box--member {
   background-color: #ede7f6;
   border-color: #673ab7;
