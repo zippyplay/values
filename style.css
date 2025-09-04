@@ -185,3 +185,24 @@ footer {
   color: white;
 }
 
+.login-button-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.login-button {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #333;
+  color: white;
+}
+
