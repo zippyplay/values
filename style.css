@@ -258,6 +258,11 @@ footer {
   display: block;
 }
 
+.icon-box--games h3 {
+  font-size: 2.0rem; 
+  margin-top: 0.8rem;
+}
+
 .icon-box i {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
