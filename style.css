@@ -306,6 +306,7 @@ footer {
   height: 120px;
   border-radius: 50%;
   display: block
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
 }
 
 .logo-navbar {
