@@ -362,9 +362,10 @@ footer {
   background-color: black;
   width: 500px;
   height: 500px;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 16px;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   margin-top: 2rem auto;
   color: white;
   display: flex;
