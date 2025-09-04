@@ -313,7 +313,7 @@ footer {
 .logo-icon {
   height: 100px
   width: auto;
-  transition: transform 0.3s ease;
+  transition: transform 1s ease;
 }
 
 .logo-navbar {
