@@ -47,9 +47,8 @@ header {
 }
 
 .hero {
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
   text-align: center;
-  background: #eef2f3;
 }
 
 .about, .blog-preview {
@@ -304,24 +303,38 @@ footer {
 
 .logo-button {
   display: inline-block;
-  width: 300px;
-  height: 300px;
-  background-color: #ffffff;
-  border: 2px solid #ffffff;
-  border-radius: 16px;
-  padding: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  margin-bottom: 1rem
 }
 
 .logo-button:hover {
-  background-color: #fff3c0;
   transform: scale(1.05);
 }
 
 .logo-icon {
-  width: 100%
-  height: 100%
-  object-fit: contain;
+  height: 100px
+  width: auto;
+  transition: transform 0.3s ease;
 }
+
+.logo-navbar {
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-logo {
+  height: 50px;
+  width: auto;
+}
+
+.slogan-text {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
