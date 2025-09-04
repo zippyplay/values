@@ -317,6 +317,8 @@ footer {
 }
 
 .logo-navbar {
+  background-color: black;
+  color: white;
   justify-content: space-between;
   padding: 1rem 2rem;
 }
