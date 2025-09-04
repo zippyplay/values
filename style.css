@@ -243,8 +243,8 @@ footer {
 .icon-box--games {
   flex: 1 1 100%;
   padding: 2.5rem;
-  background-color: #fff8e1;
-  border-color: #f9a825;
+  background-color: #fff;
+  border-color: #000;
 }
 
 .icon-box--games:hover {
@@ -253,3 +253,17 @@ footer {
   transform: scale(1.02);
   box-shadow: 0 6px 16px rgba(249, 168, 37, 0.3);
 }
+
+/* Reduce font size for icon-boxes EXCEPT Games */
+.icon-box:not(.icon-box--games) h3 {
+  font-size: 1.1rem;
+}
+
+.icon-box:not(.icon-box--games) p {
+  font-size: 0.9rem;
+}
+
+.icon-box:not(.icon-box--games) i {
+  font-size: 2rem;
+}
+
