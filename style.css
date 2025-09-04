@@ -18,11 +18,12 @@ header {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 1rem;
   max-width: 1000px;
   margin: auto;
+  position: relative;
 }
 
 .nav-links {
@@ -302,6 +303,16 @@ footer {
 }
 
 .logo-button {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  background-color: #fff8e1;
+  border: 2px solid #f9a825;
+  border-radius: 16px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .logo-button:hover {
