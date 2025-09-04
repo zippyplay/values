@@ -228,8 +228,8 @@ footer {
 }
 
 .icon-box--games {
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
   border: 2px solid #ccc;
   border-radius: 16px;
   text-align: center;
@@ -309,7 +309,8 @@ footer {
 }
 
 .icon-box--games .logo-icon {
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+<!--  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5); -->
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
 }
 
 .logo-navbar {
@@ -354,10 +355,10 @@ footer {
 
 /* Optional: fix width to make layout consistent */
 .left-column {
-  width: 400px;
+  width: 550px;
 }
 
 .right-column {
-  width: 220px;
+  width: 250px;
 }
 
