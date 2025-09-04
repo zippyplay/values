@@ -351,6 +351,6 @@ footer {
   flex-direction: row;
   gap: 2rem;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
