@@ -410,3 +410,21 @@ footer {
 .btn-login:hover {
   background-color: #ddd;
 }
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.input-group i {
+  color: white;
+}
+
