@@ -98,13 +98,12 @@ footer {
 }
 
 .icons-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-  text-align: center;
+  margin: 2rem auto;
+  max-width: 1000px;
 }
 
 .icon-box i {
@@ -112,7 +111,6 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* Make icon-box links look like blocks */
 .icon-link {
   text-decoration: none;
   color: inherit;
@@ -218,21 +216,21 @@ footer {
 }
 
 .icon-box {
-  flex: 1 1 250px;
-  padding: 2rem;
+  flex: 1 1 220px;
+  padding: 1.5rem;
   text-align: center;
   border: 2px solid #333;
   border-radius: 10px;
   text-decoration: none;
   color: inherit;
+  background-color: #fff;
   transition: all 0.3s ease;
   cursor: pointer;
-  background-color: #fff;
 }
 
 .icon-box:hover {
   background-color: #f7f7f7;
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
@@ -242,3 +240,16 @@ footer {
   display: block;
 }
 
+.icon-box--games {
+  flex: 1 1 100%;
+  padding: 2.5rem;
+  background-color: #fff8e1;
+  border-color: #f9a825;
+}
+
+.icon-box--games:hover {
+  background-color: #fff3c0;
+  border-color: #f57f17;
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(249, 168, 37, 0.3);
+}
