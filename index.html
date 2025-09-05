@@ -32,15 +32,12 @@
   />
 </head>
 
-<header>
-</header>
-
 <body>
 
   <main>
     <section class="icons-layout">
 
-      <a href="entry.html" class="icon-box--games">
+      <a href="entry.html" id="entry-link" class="icon-box--games">
         <img src="images/zippyplay-logo-white.svg" alt="ZippyPlay Logo" class="logo-icon">
         <h3>Free Web Games</h3>
         <p>We craft quick, clever games to spark your brain — free for everyone, always.</p>
@@ -49,7 +46,40 @@
     </section>
   </main>
 
+  <!-- Firebase check -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCtbDymdYFYSBjcR0NvAMt5HE-9AWDcf2U",
+      authDomain: "zippyplay-auth.firebaseapp.com",
+      projectId: "zippyplay-auth",
+      storageBucket: "zippyplay-auth.firebasestorage.app",
+      messagingSenderId: "545965083013",
+      appId: "1:545965083013:web:82fe27fa7c3a80ac201cec"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // ✅ Redirect logic
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // Already signed in
+        window.location.href = "members.html";
+      } else {
+        // Check guest mode from localStorage
+        const guestMode = localStorage.getItem("guest");
+        if (guestMode === "true") {
+          window.location.href = "guest.html";
+        } else {
+          // Stay on entry page (show button)
+          document.getElementById("entry-link").style.display = "block";
+        }
+      }
+    });
+  </script>
+
 </body>
-
 </html>
-
