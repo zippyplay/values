@@ -19,15 +19,22 @@ const auth = getAuth(app);
 export function checkAuth(redirectIfNotSignedIn = true) {
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      console.log("User is signed in:", user.email);
-      const userInfo = document.getElementById("user-info");
-      if (userInfo) {
-        userInfo.textContent = "Signed in as: " + user.email;
+      if (user.emailVerified) {
+        console.log("User is signed in:", user.email);
+        const userInfo = document.getElementById("user-info");
+        if (userInfo) {
+          userInfo.textContent = "Signed in as: " + user.email;
+        }
+      } else {
+        console.log("User signed in but not verified");
+        alert("⚠️ Please verify your email before continuing.");
+        auth.signOut();
+        window.location.href = "entry.html";
       }
     } else {
       console.log("No user signed in");
       if (redirectIfNotSignedIn) {
-        window.location.href = "entry.html"; // redirect to entry page
+        window.location.href = "entry.html";
       }
     }
   });
