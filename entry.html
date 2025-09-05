@@ -111,15 +111,18 @@
     const signupForm = document.getElementById("signup-form");
     signupForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const email = document.getElementById("signup-email").value;
-      const password = document.getElementById("signup-password").value;
+      const emailInput = document.getElementById("signup-email");
+      const passwordInput = document.getElementById("signup-password");
     
       try {
-        await createUserWithEmailAndPassword(auth, email, password);
+        await createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value);
         alert("🎉 Sign-up successful!");
         window.location.href = "members.html";
       } catch (err) {
-        alert("❌ Error: " + err.message);
+        alert("❌ Sign-up failed: " + err.message);
+        // Clear fields
+        emailInput.value = "";
+        passwordInput.value = "";
       }
     });
     
@@ -127,17 +130,20 @@
     const signinForm = document.getElementById("sign-in-form");
     signinForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const email = document.getElementById("signin-email").value;
-      const password = document.getElementById("signin-password").value;
+      const emailInput = document.getElementById("signin-email");
+      const passwordInput = document.getElementById("signin-password");
     
       try {
-        await signInWithEmailAndPassword(auth, email, password);
+        await signInWithEmailAndPassword(auth, emailInput.value, passwordInput.value);
         alert("✅ Sign-in successful!");
         window.location.href = "members.html";
       } catch (err) {
-        alert("❌ Sign in failed: " + err.message);
+        alert("❌ Sign-in failed: " + err.message);
+        // Clear fields
+        emailInput.value = "";
+        passwordInput.value = "";
       }
-    });  
+    });
 
   </script>
 
