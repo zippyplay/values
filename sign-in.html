@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login - ZippyPlay</title>
+  <title>Sign-in - ZippyPlay</title>
   <link rel="stylesheet" href="style.css" />
 
   <!-- Font Awesome preload + fallback -->
@@ -22,15 +22,15 @@
   />
 </head>
 
-<body class="login-page">
+<body class="sign-in-page">
 
-  <!-- Login Form -->
+  <!-- Sign-in Form -->
   <main>
     <section class="icons-layout">
 
       <div class="fixed-box">
 
-        <form id="login-form">
+        <form id="sign-in-form">
 
           <div class="input-group">
             <label for="email"><i class="fas fa-envelope"></i> Email:</label><br>
@@ -44,7 +44,7 @@
  
           <button type="submit" class="icon-box">
             <i class="fas fa-sign-in-alt"></i> 
-            <h3> Login </h3>
+            <h3> Sign In </h3>
           </button>
      
         </form>
@@ -98,7 +98,7 @@
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
 
-    const form = document.getElementById("login-form");
+    const form = document.getElementById("sign-in-form");
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
@@ -107,10 +107,10 @@
 
       try {
         await signInWithEmailAndPassword(auth, email, password);
-        alert("✅ Login successful!");
+        alert("✅ Sign in successful!");
         window.location.href = "members.html";
       } catch (err) {
-        alert("❌ Login failed: " + err.message);
+        alert("❌ Sign in failed: " + err.message);
       }
     });
   </script>
