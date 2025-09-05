@@ -500,7 +500,6 @@ footer {
   margin-top: 2rem auto;
   color: white;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -509,10 +508,11 @@ footer {
 .entry-panel-layout {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start;
   gap: 2rem;
   padding: 2rem;
+  flex-wrap: wrap;
 }
 
 footer {
