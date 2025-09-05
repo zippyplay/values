@@ -490,4 +490,18 @@ footer {
 }
 
 .entry-panel {
+  background-color: black;
+  width: 250px;
+  height: 750px;
+  padding: 1rem;
+  border-radius: 16px;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 };
