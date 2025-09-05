@@ -107,7 +107,6 @@
 
       try {
         await signInWithEmailAndPassword(auth, email, password);
-        alert("✅ Sign in successful!");
         window.location.href = "members.html";
       } catch (err) {
         alert("❌ Sign in failed: " + err.message);
