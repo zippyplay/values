@@ -32,11 +32,11 @@
           <form id="signup-form">
             <div class="input-group">
               <label for="email"><i class="fas fa-envelope"></i> Email:</label><br>
-              <input type="email" id="email" placeholder="Email" required><br>
+              <input type="email" id="signup-email" placeholder="Email" required><br>
             </div>
             <div class="input-group">
               <label for="password"><i class="fas fa-lock"></i> Password:</label><br>
-              <input type="password" id="password" placeholder="Password" required><br>
+              <input type="password" id="signup-password" placeholder="Password" required><br>
             </div>
             <button type="submit" class="icon-box">
               <i class="fas fa-user-plus"></i> 
@@ -49,11 +49,11 @@
           <form id="sign-in-form">
             <div class="input-group">
               <label for="email"><i class="fas fa-envelope"></i> Email:</label><br>
-              <input type="email" id="email" placeholder="Email" required><br>
+              <input type="email" id="signin-email" placeholder="Email" required><br>
             </div>
             <div class="input-group">
               <label for="password"><i class="fas fa-lock"></i> Password:</label><br>
-              <input type="password" id="password" placeholder="Password" required><br>
+              <input type="password" id="signin-password" placeholder="Password" required><br>
             </div>
             <button type="submit" class="icon-box">
               <i class="fas fa-sign-in-alt"></i> 
@@ -89,7 +89,11 @@
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
-    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+    import { 
+      getAuth, 
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword
+    } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
   
     const firebaseConfig = {
       apiKey: "AIzaSyCtbDymdYFYSBjcR0NvAMt5HE-9AWDcf2U",
@@ -102,14 +106,14 @@
   
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
-  
-    const form = document.getElementById("signup-form");
-    form.addEventListener("submit", async (e) => {
+
+    // Sign-up handler
+    const signupForm = document.getElementById("signup-form");
+    signupForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-  
-      const email = form["email"].value;
-      const password = form["password"].value;
-  
+      const email = document.getElementById("signup-email").value;
+      const password = document.getElementById("signup-password").value;
+    
       try {
         await createUserWithEmailAndPassword(auth, email, password);
         alert("🎉 Sign-up successful!");
@@ -118,21 +122,22 @@
         alert("❌ Error: " + err.message);
       }
     });
-
-    const form2 = document.getElementById("sign-in-form");
-    form2.addEventListener("submit", async (e) => {
+    
+    // Sign-in handler
+    const signinForm = document.getElementById("sign-in-form");
+    signinForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-
+      const email = document.getElementById("signin-email").value;
+      const password = document.getElementById("signin-password").value;
+    
       try {
         await signInWithEmailAndPassword(auth, email, password);
+        alert("✅ Sign-in successful!");
         window.location.href = "members.html";
       } catch (err) {
         alert("❌ Sign in failed: " + err.message);
       }
-    });
+    });  
 
   </script>
 
