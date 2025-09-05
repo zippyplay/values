@@ -358,7 +358,7 @@ footer {
   flex-wrap: nowrap;
 }
 
-.login-box {
+.fixed-box {
   background-color: black;
   width: 500px;
   height: 500px;
@@ -375,16 +375,16 @@ footer {
   text-align: center;
 }
 
-.login-box form {
+.fixed-box form {
   width: 100%
   max-width: 350px;
 }
 
-.login-box h2 {
+.fixed-box h2 {
   margin-bottom: 2rem;
 }
 
-.login-box label {
+.fixed-box label {
   margin-bottom: 0.25rem;
   gap: 0.5rem;
   display: block;
@@ -393,7 +393,7 @@ footer {
   justify-content: center;
 }
 
-.login-box input {
+.fixed-box input {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1.5rem;
