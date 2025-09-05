@@ -506,6 +506,15 @@ footer {
   text-align: center;
 };
 
+.entry-panel-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
 footer {
   background-color: #000;   /* keep dark background */
   padding: 2rem 1rem;
