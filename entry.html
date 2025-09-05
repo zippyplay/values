@@ -101,6 +101,7 @@
       getAuth, 
       createUserWithEmailAndPassword,
       signInWithEmailAndPassword
+      sendEmailVerification
     } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
   
     const firebaseConfig = {
@@ -115,19 +116,39 @@
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
 
-    // Sign-up handler
+    // ✅ Email validation helper
+    function isValidEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+
+
+    // ✅ Sign-up handler
     const signupForm = document.getElementById("signup-form");
     signupForm.addEventListener("submit", async (e) => {
       e.preventDefault();
       const emailInput = document.getElementById("signup-email");
       const passwordInput = document.getElementById("signup-password");
+      const email = emailInput.value;
+      const password = passwordInput.value;
+    
+      if (!isValidEmail(email)) {
+        alert("❌ Please enter a valid email address.");
+        return;
+      }
     
       try {
-        await createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value);
-        // ✅ Clear guest mode if user signs up
-        localStorage.removeItem("guest");
-        alert("🎉 Sign-up successful!");
-        window.location.href = "members.html";
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+    
+        // ✅ Send verification email
+        await sendEmailVerification(user);
+        alert("📧 A verification email has been sent. Please verify before signing in.");
+    
+        // Clear fields
+        emailInput.value = "";
+        passwordInput.value = "";
+    
       } catch (err) {
         alert("❌ Sign-up failed: " + err.message);
         emailInput.value = "";
@@ -135,28 +156,41 @@
       }
     });
     
-    // Sign-in handler
+    // ✅ Sign-in handler (block unverified users)
     const signinForm = document.getElementById("sign-in-form");
     signinForm.addEventListener("submit", async (e) => {
       e.preventDefault();
       const emailInput = document.getElementById("signin-email");
       const passwordInput = document.getElementById("signin-password");
+      const email = emailInput.value;
+      const password = passwordInput.value;
+    
+      if (!isValidEmail(email)) {
+        alert("❌ Please enter a valid email address.");
+        return;
+      }
     
       try {
-        await signInWithEmailAndPassword(auth, emailInput.value, passwordInput.value);
-        // ✅ Clear guest mode if user signs in
-        localStorage.removeItem("guest");
-        alert("✅ Sign-in successful!");
-        window.location.href = "members.html";
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+    
+        if (user.emailVerified) {
+          localStorage.removeItem("guest"); // clear guest mode
+          alert("✅ Sign-in successful!");
+          window.location.href = "members.html";
+        } else {
+          alert("⚠️ Please verify your email before signing in.");
+          await auth.signOut(); // force sign-out if not verified
+        }
       } catch (err) {
         alert("❌ Sign-in failed: " + err.message);
         emailInput.value = "";
         passwordInput.value = "";
       }
     });
-    
 
-  </script>
+
+    </script>
 
 </body>
 </html>

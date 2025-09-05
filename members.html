@@ -27,6 +27,14 @@
       <h2>👋 Welcome to the Members Area</h2>
       <p id="welcome-message">Loading...</p>
 
+      <!-- Resend verification block (hidden by default) -->
+      <div id="verify-reminder" style="display: none; margin-top: 1rem;">
+        <p>⚠️ Your email is not verified. Please check your inbox.</p>
+        <button id="resend-btn" class="btn-login">
+          <i class="fas fa-envelope"></i> Resend Verification Email
+        </button>
+      </div>
+
       <button id="logout-btn" class="btn-login">
         <i class="fas fa-sign-out-alt"></i> Logout
       </button>
@@ -60,13 +68,34 @@
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
 
-    // Protect page & show user info
-    onAuthStateChanged(auth, user => {
+    // ✅ Double-check sign-in + verification
+    onAuthStateChanged(auth, (user) => {
       if (user) {
-        document.getElementById("welcome-message").textContent =
-          "Welcome, " + user.email;
+        if (user.emailVerified) {
+          // Show welcome message
+          document.getElementById("welcome-message").textContent =
+            "Welcome, " + user.email;
+        } else {
+          // Show reminder UI
+          document.getElementById("welcome-message").textContent =
+            "⚠️ Email not verified.";
+          document.getElementById("verify-reminder").style.display = "block";
+        }
       } else {
-        window.location.href = "signin.html"; // redirect if not logged in
+        // No user signed in → redirect
+        window.location.href = "entry.html";
+      }
+    });
+  
+    // ✅ Resend verification email
+    document.getElementById("resend-btn").addEventListener("click", () => {
+      const user = auth.currentUser;
+      if (user) {
+        sendEmailVerification(user).then(() => {
+          alert("📧 Verification email sent again. Please check your inbox.");
+        }).catch((err) => {
+          alert("❌ Error: " + err.message);
+        });
       }
     });
 
@@ -81,6 +110,7 @@
         console.error("Logout error:", error);
       });
     });
+
   </script>
 </body>
 </html>
