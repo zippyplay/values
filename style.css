@@ -513,7 +513,8 @@ footer {
   align-items: flex-start;
   gap: 2rem;
   padding: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 footer {
