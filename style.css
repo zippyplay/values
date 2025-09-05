@@ -434,6 +434,10 @@ footer {
   margin-bottom: 0.25rem;
 }
 
+.input-group input {
+  background-color: #fff9c4;
+}
+
 .input-group i {
   color: white;
 }
