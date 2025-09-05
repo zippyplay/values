@@ -504,6 +504,13 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-shrink: 0
+  transition: background-color 0.3s ease;
+}
+
+.entry-panel:hover {
+  background-color: #d8b4fe; 
+  color: black;              
 }
 
 .entry-panel-layout {
