@@ -438,8 +438,15 @@ footer {
   color: white;
 }
 
+.text-in-fixed_box {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .text-in-fixed_box p {
-  max-width: 400px;
+  line-height: 1.6;
   margin: 3rem auto;  
-  text-algin: justify;
+  text-align: justify;
+  hyphens: auto
 }
