@@ -439,7 +439,7 @@ footer {
 }
 
 .text-in-fixed_box p {
-  max-width: 450px;
+  max-width: 400px;
   margin: 3rem auto;  
-  text-algin: center;
+  text-algin: justify;
 }
