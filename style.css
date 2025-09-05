@@ -509,12 +509,17 @@ footer {
 .entry-panel-layout {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 50px;
   padding: 2rem;
   flex-wrap: nowrap;
   overflow-x: auto;
+}
+
+.entry-wrapper {
+  display: flex;
+  justify-content: center; /* center the whole row */
 }
 
 footer {
