@@ -3,58 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Join ZippyPlay</title>
+  <title>Sign Up ZippyPlay</title>
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Font Awesome preload + fallback -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </noscript>
+
+  <!-- Full Font Awesome stylesheet with integrity -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-wMKN1r8dYFzJmoKUXkY6VpSvbkWjeY6Nnb7mTLAAgrvNymwRUB7hHnFz4XhYIYQv6VQjGkMPt1+NAC7GLb3abw=="
+    integrity="sha512-8TCCcEFN/96I+WeuHeaElA0AkREaXyzyK2M9AZZ2F4XsMnO1mZT9DeUUCq8F7TJq3uPAfr7Okw+aO3TQF2H7NQ=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
 </head>
-<body>
-  <header>
-    <nav class="navbar">
-      <div class="logo-img">
-        <a href="index.html">
-          <img src="images/zippyplay-logo.svg" alt="ZippyPlay Logo" height="32">
-        </a>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html"><i class="fas fa-home">
-        </i> Zippy </a></li>
-      </ul>
-      <button class="burger" id="burger">&#9776;</button>
-    </nav>
-  </header>
+
+<body class="signup-page">
 
   <main>
-    <section class="form-section">
-      <h1>Join ZippyPlay</h1>
-      <p>Get early access to our latest mini games.</p>
+    <section class="icons-layout">
+
+      <div class="login-box">
+
+        <form id="signup-form">
+
+          <div class="input-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email:</label><br>
+            <input type="email" id="email" placeholder="Email" required><br>
+          </div>
+      
+          <div class="input-group">
+            <label for="password"><i class="fas fa-lock"></i> Password:</label><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+          </div>
  
-      <form id="signup-form">
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" placeholder="Email" required /><br><br>
+          <button type="submit" class="icon-box">
+            <i class="fas fa-sign-in-alt"></i> 
+            <h3> Login </h3>
+          </button>
+     
+        </form>
 
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" placeholder="Password" required /><br><br>
+      </div>
 
-        <button type="submit">Sign Up</button>
-      </form>
+      <div class="secondary-icons">
+
+        <a href="index.html" class="icon-box">
+          <i class="fas fa-home"></i>
+          <h3>Zippy</h3>
+        </a>
+
+      </div>
 
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 ZippyPlay. All rights reserved.</p>
-  </footer>
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
 
   <script src="main.js"></script>
 
@@ -93,4 +109,3 @@
 
 </body>
 </html>
-
