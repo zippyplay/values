@@ -474,27 +474,36 @@ footer {
   color: #fff;
 }
 
+/* Make the panel internals consistent and evenly spaced */
 .entry-panel {
-  background-color: black;
-  width: 250px;
-  min-width: 250px;
-  height: 500px;
-  padding: 1rem;
-  border-radius: 16px;
-  border: 2px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  margin: 2rem auto;
-  color: white;
- 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-evenly;  /* even vertical spacing */
   align-items: center;
-  text-align: center;
-  flex-shrink: 0;
-  transition: background-color 0.3s ease;
   gap: 1rem;
 }
+
+//.entry-panel {
+//  background-color: black;
+//  width: 250px;
+//  min-width: 250px;
+//  height: 500px;
+//  padding: 1rem;
+//  border-radius: 16px;
+//  border: 2px solid #ccc;
+//  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+//  margin: 2rem auto;
+//  color: white;
+// 
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-evenly;
+//  align-items: center;
+//  text-align: center;
+//  flex-shrink: 0;
+//  transition: background-color 0.3s ease;
+//  gap: 1rem;
+//}
 
 .entry-panel:hover {
   background-color: grey; 
@@ -565,4 +574,38 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+/* --- IMPORTANT: keep using .icon-box, but make it a real button INSIDE entry panels --- */
+.entry-panel .icon-box {
+  /* override the global 150x150 circle from .icon-box */
+  width: 220px;
+  height: 60px;
+  border-radius: 12px;          /* rectangular button, not a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  border: 2px solid #ccc;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  cursor: pointer;
+}
+
+.entry-panel .icon-box:hover {
+  background: #222;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.entry-panel .icon-box i { 
+  font-size: 1.1rem; 
+}
+
+.entry-panel .icon-box h3 {
+  margin: 0; 
+  font-size: 1.1rem; 
+}
+
 
