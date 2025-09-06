@@ -99,12 +99,12 @@
   align-items: center;
   color: white;
   font-weight: bold;
-  margin-top: 0.1rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 
 .input-group input {
   background-color: #fff9c4; /* pale yellow */
-  margin-bottom: 0.1rem;
 }
 
 .icon-box img {
