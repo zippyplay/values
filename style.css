@@ -94,6 +94,9 @@
 }
 
 .input-group label {
+}
+
+.xxxinput-group label {
   color: white;
   font-weight: bold;
   display: flex;
