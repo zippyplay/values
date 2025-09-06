@@ -50,37 +50,38 @@
         </form>
 
         <form id="sign-in-form" class="entry-panel">
-            <div class="entry-panel-block">
-              <button type="submit" class="entry-panel-button">
-                <i class="fas fa-sign-in-alt"></i> 
-                <h3> Sign In </h3>
-              </button>
+          <div class="entry-panel-block">
+            <button type="submit" class="entry-panel-button">
+              <i class="fas fa-sign-in-alt"></i> 
+              <h3> Sign In </h3>
+            </button>
+          </div>
+          <div class="entry-panel-block">
+            <div class="entry-panel-input">
+              <label for="signin-email"><i class="fas fa-envelope"></i> Email:</label>
+              <input type="email" id="signin-email" placeholder="Email" required>
             </div>
-            <div class="entry-panel-block">
-              <div class="entry-panel-input">
-                <label for="signin-email"><i class="fas fa-envelope"></i> Email:</label>
-                <input type="email" id="signin-email" placeholder="Email" required>
-              </div>
-              <div class="entry-panel-input">
-                <label for="signin-password"><i class="fas fa-lock"></i> Password:</label>
-                <input type="password" id="signin-password" placeholder="Password" required>
-              </div>
+            <div class="entry-panel-input">
+              <label for="signin-password"><i class="fas fa-lock"></i> Password:</label>
+              <input type="password" id="signin-password" placeholder="Password" required>
             </div>
+          </div>
         </form>
 
-        <div class="entry-panel guest-panel">
-          <form id="guest">
+        <form id="guest" class="entry-panel">
+          <div class="entry-panel-block">
+            <button type="button" id="guest-btn" class="entry-panel-button">
+                <i class="fas fa-user-astronaut"></i> 
+                <h3> Guest </h3>
+            </button>
+          </div>
+          <div class="entry-panel-block">
             <div class="guest-text">
               <h3>Continue as Guest</h3>
               <p>limited access but still fun</p>
             </div>
-            <div class="guest-button">
-              <button type="button" id="guest-btn" class="icon-box">
-                <i class="fas fa-user-astronaut"></i> Guest
-              </button>
-            </div>
-          </form>
-        </div>
+          </div>
+        </form>
   
       </section>
     </div>
