@@ -68,6 +68,22 @@
   text-align: center;
 }
 
+/* -- style for members.html -- */
+
+.members-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+#welcome-message {
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+}
+
 /* -- style for guest.html -- */
 
 .entry-page-wrapper {
@@ -572,11 +588,6 @@ footer {
   margin: 3rem auto;
   text-align: center;
   box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-}
-
-#welcome-message {
-  margin: 1.5rem 0;
-  font-size: 1.2rem;
 }
 
 .btn-login {
