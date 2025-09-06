@@ -2,7 +2,7 @@
 
 /* -- global style -- */
 
-/* alt-option-button: alternative option button. appear in guest page, etc. */
+/* alt-option-button: Alternative option button. Appear in guest page, etc. */
 
 .alt-option-button {
   height: 150px;
@@ -27,23 +27,9 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* -- style for guest.html -- */
+/* large-button: Large button e.g. "Classic Games" button */
 
-.entry-page-wrapper {
-  display: flex;
-  justify-content: center; /* center the whole row */
-}
-
-.guest-layout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.guest-large-button {
+.large-button {
   width: 500px;
   height: 500px;
   border: 2px solid #ccc;
@@ -62,13 +48,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
-.guest-large-button:hover {
+.large-button:hover {
   background-color: #222;
   transform: translateY(-4px);
   box-shadow: 0 4px 16px rgba(255,255,255,0.1);
 }
 
-.guest-large-button img {
+.large-button img {
   height: 66%;
   width: auto;
   object-fit: contain;
@@ -76,11 +62,28 @@
   display: block;
 }
 
-.guest-large-button h3 {
+.large-button h3 {
   font-size: 2.0rem; 
   margin: 0;
   text-align: center;
 }
+
+/* -- style for guest.html -- */
+
+.entry-page-wrapper {
+  display: flex;
+  justify-content: center; /* center the whole row */
+}
+
+.guest-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
 
 /* -- style for entry.html -- */
 
@@ -557,6 +560,9 @@ footer {
 }
 
 .members-page .auth-box {
+}
+
+.xxx {
   width: 500px;
   min-height: 300px;
   background-color: #000;
