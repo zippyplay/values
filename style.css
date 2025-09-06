@@ -33,6 +33,7 @@
   object-fit: contain;
   margin: 0 auto 3rem;
   display: block;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
 }
 
 .index-icon h3 {
@@ -49,7 +50,6 @@
 }
 
 .index-icon .logo-icon {
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
 }
 
 
