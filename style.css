@@ -28,7 +28,7 @@
 }
 
 .index-icon img {
-  height: 66%;
+  height: 50%;
   width: auto;
   object-fit: contain;
   margin: 0 auto 3rem;
@@ -37,9 +37,17 @@
 }
 
 .index-icon h3 {
-  height: 33%;
+  height: 25%;
   width: auto;
   font-size: 2.0rem; 
+  margin: 0;
+  text-align: center;
+}
+
+.index-icon p {
+  height: 25%;
+  width: auto;
+  font-size: 0.5rem; 
   margin: 0;
   text-align: center;
 }
