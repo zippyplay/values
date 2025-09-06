@@ -7,10 +7,7 @@
   justify-content: center; /* center the whole row */
 }
 
-.icons-layout {
-}
-
-.xxx {
+.guest-layout {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +16,10 @@
   padding: 2rem;
 }
 
-.icon-box--games {
+
+
+
+.guest-large-icon {
   width: 500px;
   height: 500px;
   border: 2px solid #ccc;
@@ -38,13 +38,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
-.icon-box--games:hover {
+.guest-large-icon:hover {
   background-color: #222;
   transform: translateY(-4px);
   box-shadow: 0 4px 16px rgba(255,255,255,0.1);
 }
 
-.icon-box--games img {
+.guest-large-icon img {
   height: 66%;
   width: auto;
   object-fit: contain;
@@ -52,11 +52,16 @@
   display: block;
 }
 
-.icon-box--games h3 {
+.guest-large-icon h3 {
   font-size: 2.0rem; 
   margin: 0;
   text-align: center;
 }
+
+
+
+
+
 
 .icon-box img {
   width: 100px;         /* set a responsive size (can use % or rem too) */
