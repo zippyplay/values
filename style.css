@@ -5,6 +5,13 @@
   font-family: sans-serif;
 }
 
+main {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  height: 100vh;             /* full viewport height */
+}
+
 body {
   line-height: 1.6;
   background: #f9f9f9;
