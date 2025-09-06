@@ -1,6 +1,133 @@
 /* rewrite style.css */
 
-/* style for index page */
+/* -- style for entry page -- */
+
+.entry-wrapper {
+  display: flex;
+  justify-content: center; /* center the whole row */
+}
+
+.entry-panel-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 2rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.entry-panel {
+  background-color: black;
+  width: 250px;
+  min-width: 250px;
+  height: 500px;
+  padding: 1rem;
+  border-radius: 16px;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  margin: 2rem auto;
+  color: white;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+  gap: 1rem;
+}
+
+.entry-panel:hover {
+  background-color: grey; 
+}
+
+.entry-panel input,
+.entry-panel button {
+  width: 80%;
+  max-width: 200px;
+  margin: 0.5rem 0;
+  box-sizing: border-box;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.input-group input {
+  background-color: #fff9c4;
+}
+
+.input-group i {
+  color: white;
+}
+
+.icon-box img {
+  width: 100px;         /* set a responsive size (can use % or rem too) */
+  height: auto;        /* let height scale naturally */
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.icon-box i {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.icon-box i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.icon-box {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+
+  border-radius: 50%;
+}
+
+.icon-box:hover {
+  background-color: #f7f7f7;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.icon-box h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.icon-box p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+
+
+/* -- style for index page -- */
 
 .index-icon {
   width: 500px;
@@ -143,18 +270,6 @@ footer {
   margin: 0 auto 1rem;
 }
 
-.icon-box img {
-  width: 100px;         /* set a responsive size (can use % or rem too) */
-  height: auto;        /* let height scale naturally */
-  display: block;
-  margin: 0 auto 1rem;
-}
-
-.icon-box i {
-  color: #333;
-  margin-bottom: 1rem;
-}
-
 .icon-link {
   text-decoration: none;
   color: inherit;
@@ -258,30 +373,6 @@ footer {
   margin: 2rem auto;
 }
 
-.icon-box {
-  width: 150px;
-  height: 150px;
-  border: 2px solid #ccc;
-  border-radius: 16px;
-  text-align: center;
-  padding: 1rem;
-  text-decoration: none;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-
-  border-radius: 50%;
-}
-
-.icon-box:hover {
-  background-color: #f7f7f7;
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
 .icon-box--games {
   width: 500px;
   height: 500px;
@@ -319,22 +410,6 @@ footer {
   font-size: 2.0rem; 
   margin: 0;
   text-align: center;
-}
-
-.icon-box i {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-.icon-box h3 {
-  margin: 0.5rem 0;
-  font-size: 1.2rem;
-}
-
-.icon-box p {
-  font-size: 0.9rem;
-  margin: 0;
 }
 
 .games-category h1 {
@@ -457,26 +532,6 @@ footer {
   color: black;
 }
 
-.input-group {
-  margin-bottom: 1.5rem;
-}
-
-.input-group label {
-  color: white;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.25rem;
-}
-
-.input-group input {
-  background-color: #fff9c4;
-}
-
-.input-group i {
-  color: white;
-}
 
 .text-in-fixed_box {
   max-width: 600px;
@@ -523,57 +578,6 @@ footer {
 .btn-login:hover {
   background-color: #444;
   color: #fff;
-}
-
-/* Make the panel internals consistent and evenly spaced */
-.entry-panel {
-  background-color: black;
-  width: 250px;
-  min-width: 250px;
-  height: 500px;
-  padding: 1rem;
-  border-radius: 16px;
-  border: 2px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  margin: 2rem auto;
-  color: white;
- 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-  flex-shrink: 0;
-  transition: background-color 0.3s ease;
-  gap: 1rem;
-}
-
-.entry-panel:hover {
-  background-color: grey; 
-}
-
-.entry-panel input,
-.entry-panel button {
-  width: 80%;
-  max-width: 200px;
-  margin: 0.5rem 0;
-  box-sizing: border-box;
-}
-
-.entry-panel-layout {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 50px;
-  padding: 2rem;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-}
-
-.entry-wrapper {
-  display: flex;
-  justify-content: center; /* center the whole row */
 }
 
 footer {
