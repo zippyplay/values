@@ -50,16 +50,6 @@
   background-color: grey; 
 }
 
-.entry-panel input,
-.entry-panel label {
-}
-
-.xxx {
-  width: 80%;
-  max-width: 200px;
-  box-sizing: border-box;
-}
-
 .entry-panel-button {
   height: 150px;
   width: 150px;
@@ -94,6 +84,7 @@
 .entry-panel-input {
   height: 33%;
   width: auto;
+  box-sizing: border-box;
 }
 
 .entry-panel-input label {
