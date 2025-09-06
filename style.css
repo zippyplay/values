@@ -476,34 +476,26 @@ footer {
 
 /* Make the panel internals consistent and evenly spaced */
 .entry-panel {
+  background-color: black;
+  width: 250px;
+  min-width: 250px;
+  height: 500px;
+  padding: 1rem;
+  border-radius: 16px;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  margin: 2rem auto;
+  color: white;
+ 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;  /* even vertical spacing */
+  justify-content: space-evenly;
   align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
   gap: 1rem;
 }
-
-//.entry-panel {
-//  background-color: black;
-//  width: 250px;
-//  min-width: 250px;
-//  height: 500px;
-//  padding: 1rem;
-//  border-radius: 16px;
-//  border: 2px solid #ccc;
-//  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-//  margin: 2rem auto;
-//  color: white;
-// 
-//  display: flex;
-//  flex-direction: column;
-//  justify-content: space-evenly;
-//  align-items: center;
-//  text-align: center;
-//  flex-shrink: 0;
-//  transition: background-color 0.3s ease;
-//  gap: 1rem;
-//}
 
 .entry-panel:hover {
   background-color: grey; 
