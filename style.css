@@ -53,7 +53,8 @@
 }
 
 .input-group {
-  margin-bottom: 1.5rem;
+  height: 33%;
+  width: auto;
 }
 
 .input-group label {
@@ -66,11 +67,7 @@
 }
 
 .input-group input {
-  background-color: #fff9c4;
-}
-
-.input-group i {
-  color: white;
+  background-color: #fff9c4; /* pale yellow */
 }
 
 .icon-box img {
