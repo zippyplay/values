@@ -45,16 +45,16 @@
 }
 
 .entry-panel input,
-.entry-panel button {
+.entry-panel label {
   width: 80%;
   max-width: 200px;
-  margin: 0.5rem 0;
   box-sizing: border-box;
 }
 
 .entry-panel-button {
   height: 50%;
   width: auto;
+  border-radius: 50%
 }
 
 #signup-email,
