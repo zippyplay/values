@@ -485,6 +485,7 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   margin: 2rem auto;
   color: white;
+ 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -500,7 +501,9 @@ footer {
 
 .entry-panel input,
 .entry-panel button {
-  width: 100%
+  width: 80%
+  max-width: 200px;
+  margin: 0.5rem 0;
   box-sizing: border-box;
 }
 
