@@ -504,15 +504,6 @@ footer {
   box-sizing: border-box;
 }
 
-.entry-panel button {
-  height: 33%;
-  width: auto;
-  object-fit: contain;
-  margin: 0 auto 3rem;
-  display: block;
-}
-
-
 .entry-panel-layout {
   display: flex;
   flex-direction: row;
