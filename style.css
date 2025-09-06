@@ -2,12 +2,12 @@
 
 /* -- style for entry page -- */
 
-.entry-wrapper {
+.entry-page-wrapper {
   display: flex;
   justify-content: center; /* center the whole row */
 }
 
-.entry-panel-layout {
+.entry-panels-layout {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
