@@ -52,10 +52,16 @@
 }
 
 .entry-panel-button {
-  height: 33%;
-  width: auto;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   display: block;
+}
+
+.entry-panel-button:hover {
+  background-color: #f7f7f7;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 #signup-email,
