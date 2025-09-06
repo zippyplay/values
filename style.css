@@ -234,6 +234,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
@@ -245,15 +246,19 @@ footer {
 }
 
 .icon-box--games img {
-  width: 250px;
-  height: 250px;
+//  width: 250px;
+//  height: 250px;
+  height: 50%;
+  width: auto;
+  object-fit: contain;
   margin: 0 auto 1rem;
   display: block;
 }
 
 .icon-box--games h3 {
   font-size: 2.0rem; 
-  margin-top: 0.8rem;
+  margin: 0;
+  text-align: center;
 }
 
 .icon-box i {
