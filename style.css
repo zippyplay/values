@@ -55,6 +55,29 @@
   text-align: center;
 }
 
+.guest-alt-button {
+  height: 150px;
+  width: 150px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.guest-alt-button i {
+  color: #333;
+  margin-bottom: 1.0rem;
+  font-size: 2.5rem;
+  display: block;
+}
+
+.guest-alt-button:hover {
+  background-color: #f7f7f7;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 
 
 
@@ -223,6 +246,15 @@
 
 .entry-panel-input input {
   background-color: #fff9c4; /* pale yellow */
+}
+
+.entry-panel-text {
+  flex: 2;                     /* take 2/3 of height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* center text vertically */
+  align-items: center;
+  text-align: center;
 }
 
 /* -- style for index.html -- */
@@ -641,28 +673,6 @@ footer {
   width: 100px;              /* adjust size as needed */
   margin-bottom: 1rem;      /* space between logo and text */
   border-radius: 50%;
-}
-
-.guest-panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* split top vs bottom */
-}
-
-.guest-text {
-  flex: 2;                     /* take 2/3 of height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;      /* center text vertically */
-  align-items: center;
-  text-align: center;
-}
-
-.guest-button {
-  flex: 1;                     /* take 1/3 of height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 
