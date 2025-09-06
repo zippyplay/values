@@ -1,3 +1,3 @@
 git add .
-git commit -m "Revise entry page text."
+git commit -m "Revise some text."
 git push origin main
