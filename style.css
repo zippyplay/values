@@ -52,6 +52,9 @@
 
 .entry-panel input,
 .entry-panel label {
+}
+
+.xxx {
   width: 80%;
   max-width: 200px;
   box-sizing: border-box;
@@ -88,22 +91,20 @@
   max-width: 200;
 }
 
-.input-group {
+.entry-panel-input {
   height: 33%;
   width: auto;
 }
 
-.input-group label {
+.entry-panel-input label {
   display: flex;
   gap: 0.5rem;
   align-items: center;
   color: white;
   font-weight: bold;
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
 }
 
-.input-group input {
+.entry-panel-input input {
   background-color: #fff9c4; /* pale yellow */
 }
 
