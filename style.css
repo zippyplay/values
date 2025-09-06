@@ -96,12 +96,12 @@
 .input-group label {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
   color: white;
   font-weight: bold;
 }
 
 .xxxinput-group label {
-  align-items: center;
   margin-bottom: 0.25rem;
 }
 
