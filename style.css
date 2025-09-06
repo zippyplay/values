@@ -95,13 +95,13 @@
 
 .input-group label {
   display: flex;
+  gap: 0.5rem;
   color: white;
   font-weight: bold;
 }
 
 .xxxinput-group label {
   align-items: center;
-  gap: 0.5rem;
   margin-bottom: 0.25rem;
 }
 
