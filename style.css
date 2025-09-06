@@ -37,6 +37,8 @@
 }
 
 .index-icon h3 {
+  height: 33%;
+  width: auto;
   font-size: 2.0rem; 
   margin: 0;
   text-align: center;
