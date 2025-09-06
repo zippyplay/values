@@ -19,7 +19,7 @@
 
 
 
-.guest-large-icon {
+.guest-large-button {
   width: 500px;
   height: 500px;
   border: 2px solid #ccc;
@@ -38,13 +38,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
-.guest-large-icon:hover {
+.guest-large-button:hover {
   background-color: #222;
   transform: translateY(-4px);
   box-shadow: 0 4px 16px rgba(255,255,255,0.1);
 }
 
-.guest-large-icon img {
+.guest-large-button img {
   height: 66%;
   width: auto;
   object-fit: contain;
@@ -52,7 +52,7 @@
   display: block;
 }
 
-.guest-large-icon h3 {
+.guest-large-button h3 {
   font-size: 2.0rem; 
   margin: 0;
   text-align: center;
