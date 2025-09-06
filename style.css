@@ -1,3 +1,61 @@
+/* rewrite style.css */
+
+/* style for index page */
+
+.index-icon {
+  width: 500px;
+  height: 500px;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.index-icon:hover {
+  background-color: #222;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(255,255,255,0.1);
+}
+
+.index-icon img {
+  height: 66%;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto 3rem;
+  display: block;
+}
+
+.index-icon h3 {
+  font-size: 2.0rem; 
+  margin: 0;
+  text-align: center;
+}
+
+.logo-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: block
+}
+
+.index-icon .logo-icon {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+
+/* ----------------- */
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -300,17 +358,6 @@ footer {
 
 .logo-button:hover {
   transform: translateY(-4px);
-}
-
-.logo-icon {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  display: block
-}
-
-.icon-box--games .logo-icon {
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
 }
 
 .logo-navbar {
