@@ -246,10 +246,10 @@ footer {
 }
 
 .icon-box--games img {
-  height: 75%;
+  height: 66%;
   width: auto;
   object-fit: contain;
-  margin: 0 auto 1rem;
+  margin: 0 auto 3rem;
   display: block;
 }
 
