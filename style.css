@@ -488,11 +488,12 @@ footer {
  
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  flex-shrink: 0
+  flex-shrink: 0;
   transition: background-color 0.3s ease;
+  gap: 1rem;
 }
 
 .entry-panel:hover {
