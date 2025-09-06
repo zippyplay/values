@@ -246,8 +246,6 @@ footer {
 }
 
 .icon-box--games img {
-//  width: 250px;
-//  height: 250px;
   height: 50%;
   width: auto;
   object-fit: contain;
