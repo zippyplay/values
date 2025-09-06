@@ -1,5 +1,32 @@
 /* rewrite style.css */
 
+/* -- global style -- */
+
+/* alt-option: alternative option button. appear in guest page, etc. */
+
+.alt-option-button {
+  height: 150px;
+  width: 150px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.alt-option-button i {
+  color: #333;
+  margin-bottom: 1.0rem;
+  font-size: 2.5rem;
+  display: block;
+}
+
+.alt-option-button:hover {
+  background-color: #f7f7f7;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 /* -- style for guest.html -- */
 
 .entry-page-wrapper {
@@ -37,6 +64,8 @@
 
 .guest-large-button:hover {
   background-color: #222;
+  width: 250px;
+  height: 250px;
   transform: translateY(-4px);
   box-shadow: 0 4px 16px rgba(255,255,255,0.1);
 }
@@ -53,29 +82,6 @@
   font-size: 2.0rem; 
   margin: 0;
   text-align: center;
-}
-
-.alt-option-button {
-  height: 150px;
-  width: 150px;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  display: block;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-}
-
-.alt-option-button i {
-  color: #333;
-  margin-bottom: 1.0rem;
-  font-size: 2.5rem;
-  display: block;
-}
-
-.alt-option-button:hover {
-  background-color: #f7f7f7;
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* -- style for entry.html -- */
