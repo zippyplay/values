@@ -74,16 +74,16 @@ footer {
   }
 }
 
-.icon-box img {
-  width: 100px;         /* set a responsive size (can use % or rem too) */
-  height: auto;        /* let height scale naturally */
+.hero img {
+  width: clamp(50px, 100vw, 200px);
+  height: auto;
   display: block;
   margin: 0 auto 1rem;
 }
 
-.hero img {
-  width: clamp(50px, 100vw, 200px);
-  height: auto;
+.icon-box img {
+  width: 100px;         /* set a responsive size (can use % or rem too) */
+  height: auto;        /* let height scale naturally */
   display: block;
   margin: 0 auto 1rem;
 }
@@ -503,6 +503,15 @@ footer {
   width: 100%
   box-sizing: border-box;
 }
+
+.entry-panel button {
+  height: 33%;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto 3rem;
+  display: block;
+}
+
 
 .entry-panel-layout {
   display: flex;
