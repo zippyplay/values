@@ -52,6 +52,11 @@
   box-sizing: border-box;
 }
 
+.entry-panel-button {
+  height: 33%;
+  width: auto;
+}
+
 #signup-email,
 #signup-password,
 #signin-email,
