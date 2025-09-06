@@ -18,6 +18,12 @@
   overflow-x: auto;
 }
 
+.entry-panel-block {
+  height: 30%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .entry-panel {
   background-color: black;
   width: 250px;
