@@ -52,6 +52,14 @@
   box-sizing: border-box;
 }
 
+#signup-email,
+#signup-password,
+#signin-email,
+#signin-password {
+  width: 100%;
+  max-width: 200;
+}
+
 .input-group {
   height: 33%;
   width: auto;
